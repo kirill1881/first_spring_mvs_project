@@ -31,7 +31,7 @@ public class AddItemController {
         carModel.setUrl(url);
         carModel.setDisc(disc);
         carModel.setPrice(price);
-        
+
         carRepo.save(carModel);
         return new RedirectView("/");
     }

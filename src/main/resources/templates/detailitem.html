@@ -110,10 +110,14 @@
     </div>
 </header>
 
-<h1 th:text="${car.getName()}"></h1>
-<h2 th:text="${car.getYear()}"></h2>
-<h2 th:text="${car.getVolume()}"></h2>
-<img th:src="${car.getUrl()}">
+<h1 th:text="${car.getCarModel().getName()}"></h1>
+<h2 th:text="${car.getCarModel().getYear()}"></h2>
+<h2 th:text="${car.getCarModel().getVolume()}"></h2>
+<img th:src="${car.getCarModel().getUrl()}">
+<p th:text="${car.getCarModel().getDisc()}"></p>
+<h2 th:text="${car.getCarModel().getPrice()}+' byn'"></h2>
+<h2 th:text="${car.getUsdPrice()}+' usd'"></h2>
+<h2 th:text="${car.getEurPrice()}+' eur'"></h2>
 
 <footer class="text-muted py-5">
     <div class="container">

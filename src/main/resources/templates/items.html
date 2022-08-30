@@ -111,6 +111,12 @@
 </header>
 
 <main>
+    <form method="post">
+        <p><input type="number" placeholder="стартовая цена" name="startPrice"></p>
+        <p><input type="number" placeholder="конечная цена" name="endPrice"></p>
+        <button type="submit" class="btn btn-warning">Применить</button>
+    </form>
+    <p><a class="btn btn-danger" href="/allitems">Сбросить фильтр</a></p>
     <div class="album py-5 bg-light">
         <div class="container">
 
@@ -124,6 +130,7 @@
                         <div class="card-body">
                             <p class="card-text" th:text="${c.getName()}"></p>
                             <p class="card-text" th:text="${c.getYear()}"></p>
+                            <p class="card-text" th:text="${c.getPrice()}+' byn'"></p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
                                     <a type="button" class="btn btn-sm btn-outline-secondary"
